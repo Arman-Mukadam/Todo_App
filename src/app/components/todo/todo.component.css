@@ -1,0 +1,15 @@
+.todo.done .content {
+    text-decoration: line-through;
+}
+
+.todo-form input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid rgba(0, 128, 0, 0.375);
+}
+
+.todo-form input {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #f5f5f5;
+}

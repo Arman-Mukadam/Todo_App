@@ -1,0 +1,29 @@
+<div class="todo-section">
+    <div class="container">
+        <div class="row justify-content-center text-center my-5">
+            <div class="col-4">
+                <h1 class="mb-4">My Todo App</h1>
+                <div class="todos">
+                    <form action="" class="todo-form">
+                        <input class="todo-input form-input" type="text" name="inputTodo" placeholder="Enter your todo"
+                            [(ngModel)]="inputTodo">
+                            <button class="btn btn-success" (click)="addTodo()"><i class="fa-solid fa-plus"></i></button>
+                    </form>
+                </div>
+                <div class="todos" *ngFor="let todo of todos; let i =index" class="todo{{todo.completed ? 'done':''}}">
+                    <div class="d-flex justify-content-between mb-2">
+                        <div class="id">
+                            {{i}}
+                        </div>
+                        <div class="content" (click)="toggleDone(i)">
+                            {{todo.content}}
+                        </div>
+                        <button class="delete btn btn-danger" (click)="deleteTodo(i)">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
